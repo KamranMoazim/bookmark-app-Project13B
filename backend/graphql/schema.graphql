@@ -1,0 +1,19 @@
+type BookMark {
+  id: ID!
+  title: String!
+  url: String!
+}
+
+input BookMarkInput {
+  id: ID!
+  title: String!
+  url: String!
+}
+
+type Query {
+  getBookMarks: [BookMark]
+}
+
+type Mutation {
+  addBookMark(bookmark: BookMarkInput!): BookMark
+}
